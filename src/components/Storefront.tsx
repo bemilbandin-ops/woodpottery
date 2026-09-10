@@ -43,11 +43,7 @@ function CustomBlocks({ page }: { page: PublicPage }) {
   return (
     <section className="custom-blocks">
       {blocks.map((block) => (
-        <RichText
-          key={block.id}
-          html={block.html}
-          className={`custom-block align-${block.alignment} size-${block.size}`}
-        />
+        <RichText key={block.id} html={block.html} className={`custom-block align-${block.alignment} size-${block.size}`} />
       ))}
     </section>
   )
@@ -87,17 +83,12 @@ export function Storefront() {
       <main>
         <section className="hero">
           <div className="hero-grid" aria-hidden="true" />
-          <div className="hero-type">
-            <RichText html={text('hero.title', 'Trä / Keramik')} />
-          </div>
+          <div className="hero-type"><RichText html={text('hero.title', 'Trä / Keramik')} /></div>
           {heroA && <div className="hero-object hero-object-a"><img src={heroA.image} alt="" /></div>}
           {heroB && <div className="hero-object hero-object-b"><img src={heroB.image} alt="" /></div>}
           <div className="hero-bottom">
             <RichText html={text('hero.meta', 'Små upplagor · Sverige')} className="hero-meta" />
-            <a className="hero-action" href="#objekt">
-              <RichText html={text('hero.action', 'Se objekt')} inline />
-              <ArrowDown size={17} />
-            </a>
+            <a className="hero-action" href="#objekt"><RichText html={text('hero.action', 'Se objekt')} inline /><ArrowDown size={17} /></a>
           </div>
         </section>
 
@@ -122,16 +113,12 @@ export function Storefront() {
                     <span>{product.category}</span>
                     <span>{product.stock > 0 ? `${text('product.stock', 'Kvar').replace(/<[^>]*>/g, '')} ${product.stock}` : text('product.soldout', 'Slut').replace(/<[^>]*>/g, '')}</span>
                   </div>
-                  <button className="product-title-button" onClick={() => setSelected(product)}>
-                    <h3>{product.title}</h3>
-                    <ArrowUpRight size={24} />
-                  </button>
+                  <button className="product-title-button" onClick={() => setSelected(product)}><h3>{product.title}</h3><ArrowUpRight size={24} /></button>
                   <RichText html={product.descriptionHtml} className="product-description" />
                   <div className="product-buyline">
                     <strong>{formatSek(product.priceOre)}</strong>
                     <button className="add-button" onClick={() => add(product)} disabled={product.stock < 1}>
-                      <RichText html={product.stock < 1 ? text('product.soldout', 'Slut') : text('product.add', 'Lägg i')} inline />
-                      <span>+</span>
+                      <RichText html={product.stock < 1 ? text('product.soldout', 'Slut') : text('product.add', 'Lägg i')} inline /><span>+</span>
                     </button>
                   </div>
                 </div>
@@ -148,21 +135,12 @@ export function Storefront() {
           <a href={`mailto:${snapshot.settings.contactEmail}`}><RichText html={text('footer.contact', 'Kontakt')} inline /></a>
           <Link to="/villkor"><RichText html={text('footer.terms', 'Köpvillkor')} inline /></Link>
           <Link to="/integritet"><RichText html={text('footer.privacy', 'Integritet')} inline /></Link>
-          {snapshot.settings.instagramUrl && <a href={snapshot.settings.instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a>}
+          {snapshot.settings.instagramUrl && <a href={snapshot.settings.instagramUrl} target="_blank" rel="noreferrer"><RichText html={text('footer.instagram', 'Instagram')} inline /> ↗</a>}
         </div>
       </footer>
 
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
-      {selected && (
-        <ProductDialog
-          product={selected}
-          onClose={() => setSelected(null)}
-          onAdd={() => {
-            add(selected)
-            setSelected(null)
-          }}
-        />
-      )}
+      {selected && <ProductDialog product={selected} onClose={() => setSelected(null)} onAdd={() => { add(selected); setSelected(null) }} />}
     </div>
   )
 }
@@ -175,7 +153,7 @@ export function LegalPage({ page }: { page: 'terms' | 'privacy' }) {
     <div className="legal-shell">
       <header className="site-header">
         <Link className="brand" to="/">{snapshot.settings.brandName}</Link>
-        <Link className="legal-back" to="/">Tillbaka ↙</Link>
+        <Link className="legal-back" to="/"><RichText html={text('legal.back', 'Tillbaka')} inline /> ↙</Link>
       </header>
       <main className="legal-main">
         <span className="section-number">02</span>
