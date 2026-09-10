@@ -8,10 +8,10 @@ export interface AuthAdapter {
   logout(): Promise<void>
 }
 
-export const DEMO_ADMIN = {
+export const DEMO_ADMIN: { user: string; passphrase: string } = {
   user: 'admin',
   passphrase: 'verkstad',
-} as const
+}
 
 export const localDemoAuthAdapter: AuthAdapter = {
   getSession() {
