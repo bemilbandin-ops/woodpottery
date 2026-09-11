@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="t d">
+  <title id="t">Bräda i ask</title><desc id="d">Abstrakt produktbild av en serveringsbräda i trä.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#181b19"/><stop offset="1" stop-color="#272a24"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b79268"/><stop offset=".45" stop-color="#8d6b4e"/><stop offset="1" stop-color="#5d4434"/></linearGradient>
+    <radialGradient id="glow" cx="30%" cy="30%" r="60%"><stop stop-color="#9aa48a" stop-opacity=".2"/><stop offset="1" stop-color="#9aa48a" stop-opacity="0"/></radialGradient>
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".42" numOctaves="3" seed="4"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 .12 0"/></filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="25"/></filter>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg)"/>
+  <rect width="800" height="900" fill="url(#glow)"/>
+  <ellipse cx="426" cy="674" rx="222" ry="46" fill="#030403" opacity=".48" filter="url(#shadow)"/>
+  <g transform="rotate(-10 400 470)">
+    <path d="M255 222h304c25 0 45 20 45 45v381c0 25-20 45-45 45H255c-25 0-45-20-45-45V267c0-25 20-45 45-45z" fill="url(#wood)"/>
+    <path d="M380 222v-58c0-24 19-43 43-43h-8c24 0 43 19 43 43v58" fill="url(#wood)"/>
+    <circle cx="419" cy="169" r="15" fill="#24241f"/>
+    <path d="M247 310c71 17 144 13 220-12 53-17 91-19 113-7M241 382c99 20 205 8 321-38M239 463c85-14 167-6 245 22 38 14 72 16 102 8M242 552c90 24 200 10 330-43M255 627c89-7 173 2 253 27" fill="none" stroke="#3c2f28" stroke-opacity=".3" stroke-width="4"/>
+    <path d="M271 247h263" stroke="#eadbc7" stroke-opacity=".15" stroke-width="3"/>
+  </g>
+  <rect width="800" height="900" filter="url(#noise)" opacity=".5"/>
+  <path d="M42 52h716M42 848h716" stroke="#e8e3d9" stroke-opacity=".08"/>
+  <text x="45" y="82" fill="#e8e3d9" fill-opacity=".4" font-family="monospace" font-size="12" letter-spacing="3">TRÄ / 01</text>
+</svg>

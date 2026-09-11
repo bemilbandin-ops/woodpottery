@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="t d">
+  <title id="t">Mörk skål</title><desc id="d">Abstrakt produktbild av en låg stengodsskål.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24271f"/><stop offset="1" stop-color="#151713"/></linearGradient>
+    <radialGradient id="halo" cx="55%" cy="38%" r="48%"><stop stop-color="#b96649" stop-opacity=".38"/><stop offset="1" stop-color="#b96649" stop-opacity="0"/></radialGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5b5148"/><stop offset=".46" stop-color="#2d2b28"/><stop offset="1" stop-color="#121311"/></linearGradient>
+    <radialGradient id="inside" cx="46%" cy="36%" r="65%"><stop stop-color="#71705f"/><stop offset=".5" stop-color="#32332c"/><stop offset="1" stop-color="#171815"/></radialGradient>
+    <filter id="noise"><feTurbulence baseFrequency=".78" numOctaves="4" seed="9" type="fractalNoise"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .16 0"/></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg)"/>
+  <rect width="800" height="900" fill="url(#halo)"/>
+  <ellipse cx="405" cy="650" rx="235" ry="62" fill="#050605" opacity=".5" filter="url(#shadow)"/>
+  <path d="M177 473c19 169 83 243 227 244 146 1 212-75 229-244z" fill="url(#clay)"/>
+  <ellipse cx="405" cy="477" rx="229" ry="98" fill="#11120f"/>
+  <ellipse cx="405" cy="471" rx="206" ry="77" fill="url(#inside)"/>
+  <ellipse cx="405" cy="461" rx="164" ry="50" fill="#171915" opacity=".78"/>
+  <path d="M206 496c36 111 99 167 198 167 98 0 167-57 199-168" fill="none" stroke="#9d7966" stroke-opacity=".22" stroke-width="3"/>
+  <path d="M230 445c75-52 289-54 360 1" fill="none" stroke="#d2b49c" stroke-opacity=".18" stroke-width="5"/>
+  <rect width="800" height="900" filter="url(#noise)" opacity=".55"/>
+  <path d="M42 52h716M42 848h716" stroke="#e8e3d9" stroke-opacity=".08"/>
+  <text x="45" y="82" fill="#e8e3d9" fill-opacity=".4" font-family="monospace" font-size="12" letter-spacing="3">KERAMIK / 01</text>
+</svg>
